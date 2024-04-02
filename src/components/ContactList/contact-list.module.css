@@ -1,0 +1,25 @@
+.list {
+  width: 600px;
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+.listLi {
+  font-size: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 5px 10px 5px 10px;
+}
+.listButton {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.listButton:hover {
+  background-color: azure;
+}
