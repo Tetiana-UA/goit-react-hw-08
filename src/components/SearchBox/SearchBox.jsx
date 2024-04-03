@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setNewFilter, selectTextFilter } from "../../redux/filtersSlice.js";
+import { setNewFilter, selectTextFilter } from "../../redux/filters/slice.js";
 
 import styles from "./search-box.module.css";
 

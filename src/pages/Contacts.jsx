@@ -1,16 +1,17 @@
 //import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContacts } from "./redux/contactsOps";
 
-import ContactsForm from "./components/ContactForm/ContactForm";
-import ContactsList from "./components/ContactList/ContactList";
-import SearchBox from "./components/SearchBox/SearchBox";
-import Loader from "./components/Loader/Loader";
-import Error from "./components/Error/Error";
-import { selectLoading, selectError } from "./redux/contactsSlice";
+import ContactsForm from "../components/ContactForm/ContactForm";
+import ContactsList from "../components/ContactList/ContactList";
+import SearchBox from "../components/SearchBox/SearchBox";
+import Loader from "../components/Loader/Loader";
+import Error from "../components/Error/Error";
 
-import styles from "./app.module.css";
+import { selectLoading, selectError } from "../redux/contacts/selectors";
+import { fetchContacts } from "../redux/contacts/operations";
+
+import styles from "../app.module.css";
 
 // Переписуємо книгу контактів на Redux Toolkit
 const App = () => {
