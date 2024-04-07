@@ -1,6 +1,8 @@
 //import { useDispatch } from "react-redux";
 import { Formik, Form, Field } from "formik";
 
+import css from "./registration-form.module.css";
+
 export default function RegistrationForm() {
   //const dispatch = useDispatch();
 
@@ -17,16 +19,16 @@ export default function RegistrationForm() {
       }}
       onSubmit={handleSubmit}
     >
-      <Form>
-        <label>
+      <Form className={css.form} autoComplete="off">
+        <label className={css.label}>
           Username
           <Field type="text" name="name" />
         </label>
-        <label>
+        <label className={css.label}>
           Email
           <Field type="email" name="email" />
         </label>
-        <label>
+        <label className={css.label}>
           Password
           <Field type="password" name="password" />
         </label>

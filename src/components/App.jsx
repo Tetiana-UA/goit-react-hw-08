@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import Layout from "./Layout/Layout";
 
 const HomePage = lazy(() => import("../pages/Home"));
 const RegisterPage = lazy(() => import("../pages/Register"));
@@ -9,8 +10,7 @@ const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
 
 export default function App() {
   return (
-    <div>
-      <h2>PhoneBook</h2>
+    <Layout>
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -20,6 +20,6 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </div>
+    </Layout>
   );
 }

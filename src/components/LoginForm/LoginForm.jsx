@@ -1,5 +1,7 @@
 import { Formik, Form, Field } from "formik";
 
+import css from "./login-form.module.css";
+
 export default function LoginForm() {
   const handleSubmit = () => {};
 
@@ -11,12 +13,12 @@ export default function LoginForm() {
       }}
       onSubmit={handleSubmit}
     >
-      <Form>
-        <label>
+      <Form className={css.form} autoComplete="off">
+        <label className={css.label}>
           Email
           <Field type="email" name="email" />
         </label>
-        <label>
+        <label className={css.label}>
           Password
           <Field type="password" name="password" />
         </label>
