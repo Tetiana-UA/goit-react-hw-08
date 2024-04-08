@@ -1,9 +1,25 @@
 .form {
-  width: 320px;
+  width: 500px;
+  padding: 15px 50px 15px 50px;
 }
 
 .label {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+}
+
+.formInput {
+  border-color: #7390d8;
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.formInput:hover {
+  border-color: #2951b7;
+}
+
+.formButton:hover {
+  background-color: azure;
 }

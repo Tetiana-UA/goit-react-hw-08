@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from "./Layout/Layout";
 
+
+
 const HomePage = lazy(() => import("../pages/Home"));
 const RegisterPage = lazy(() => import("../pages/Register"));
 const LoginPage = lazy(() => import("../pages/Login"));

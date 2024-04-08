@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "../../redux/contacts/operations";
 
-import styles from "./contact-form.module.css";
+import css from "./contact-form.module.css";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -68,38 +68,38 @@ const ContactsForm = () => {
         actions.resetForm();
       }}
     >
-      <Form className={styles.form}>
-        <div className={styles.formElement}>
-          <label className={styles.formLabel} htmlFor={contactNameId}>
+      <Form className={css.form}>
+        <div className={css.formElement}>
+          <label className={css.formLabel} htmlFor={contactNameId}>
             Name
           </label>
           <Field
-            className={styles.formInput}
+            className={css.formInput}
             type="text"
             name="name"
             required
             id={contactNameId}
           />
-          <ErrorMessage className={styles.error} name="name" component="span" />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
-        <div className={styles.formElement}>
-          <label className={styles.formLabel} htmlFor={contactNumberId}>
+        <div className={css.formElement}>
+          <label className={css.formLabel} htmlFor={contactNumberId}>
             Number
           </label>
           <Field
-            className={styles.formInput}
+            className={css.formInput}
             type="tel"
             name="number"
             required
             id={contactNumberId}
           />
           <ErrorMessage
-            className={styles.error}
+            className={css.error}
             name="number"
             component="span"
           />
         </div>
-        <button className={styles.formButton} type="submit">
+        <button className={css.formButton} type="submit">
           Add contact
         </button>
       </Form>

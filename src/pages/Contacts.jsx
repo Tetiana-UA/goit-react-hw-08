@@ -7,11 +7,10 @@ import ContactsList from "../components/ContactList/ContactList";
 import SearchBox from "../components/SearchBox/SearchBox";
 import Loader from "../components/Loader/Loader";
 import Error from "../components/Error/Error";
+import PageTitle from "../components/PageTitle/PageTitle";
 
 import { selectLoading, selectError } from "../redux/contacts/selectors";
 import { fetchContacts } from "../redux/contacts/operations";
-
-import styles from "../app.module.css";
 
 // Переписуємо книгу контактів на Redux Toolkit
 const App = () => {
@@ -38,8 +37,8 @@ const App = () => {
   //}, []);
 
   return (
-    <div className={styles.wraper}>
-      <h2 className={styles.title}>PhoneBook</h2>
+    <div>
+      <PageTitle>PhoneBook</PageTitle>
       <ContactsForm />
       <SearchBox />
       {error && <Error>Error...</Error>}
